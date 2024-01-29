@@ -1,6 +1,5 @@
 // Components
-import { GrFormNext, GrFormPrevious } from "react-icons/gr";
-import { FiSend } from "react-icons/fi";
+import { GrFormNext, GrFormPrevious, GrSend } from "react-icons/gr";
 import AccountForm from "./components/AccountForm";
 import ReviewForm from "./components/ReviewForm";
 import Thanks from "./components/Thanks";
@@ -46,7 +45,7 @@ function App() {
             ) : (
               <button type="submit">
                 <span>Send</span>
-                <FiSend />
+                <GrSend />
               </button>
             )}
           </div>

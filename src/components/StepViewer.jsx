@@ -1,5 +1,4 @@
-import { AiOutlineUser, AiOutlineStar } from "react-icons/ai";
-import { FiSend } from "react-icons/fi";
+import { AiOutlineUser, AiOutlineStar, AiOutlineSend } from "react-icons/ai";
 
 import "./StepViewer.css";
 
@@ -15,7 +14,7 @@ const StepViewer = ({ currentStep }) => {
         <p>Review</p>
       </div>
       <div className={`step ${currentStep >= 2 ? "active" : ""}`}>
-        <FiSend />
+        <AiOutlineSend />
         <p>Submission</p>
       </div>
     </div>
