@@ -4,6 +4,7 @@ import { FiSend } from "react-icons/fi";
 import AccountForm from "./components/AccountForm";
 import ReviewForm from "./components/ReviewForm";
 import Thanks from "./components/Thanks";
+import StepViewer from "./components/StepViewer";
 
 // Hooks
 import { useStep } from "./hooks/useStep";
@@ -13,7 +14,7 @@ import "./App.css";
 
 function App() {
   const stepsComponents = [<AccountForm />, <ReviewForm />, <Thanks />];
-  const { currentComponent, next, back, isFirst, isLast } =
+  const { currentStep, currentComponent, next, back, isFirst, isLast } =
     useStep(stepsComponents);
 
   return (
@@ -26,7 +27,7 @@ function App() {
         </p>
       </div>
       <div className="form-container">
-        <p>steps</p>
+        <StepViewer currentStep={currentStep} />
         <form onSubmit={(e) => next(e)}>
           <div className="inputs-container">{currentComponent}</div>
           <div className="actions">
