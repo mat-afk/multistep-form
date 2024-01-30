@@ -7,12 +7,30 @@ import StepViewer from "./components/StepViewer";
 
 // Hooks
 import { useStep } from "./hooks/useStep";
+import { useState } from "react";
 
 // CSS
 import "./App.css";
 
+const dataTemplate = {
+  name: "",
+  email: "",
+  review: "",
+  comment: "",
+};
+
 function App() {
-  const stepsComponents = [<AccountForm />, <ReviewForm />, <Thanks />];
+  const [data, setData] = useState(dataTemplate);
+
+  const handleData = (key, value) => {
+    setData({ ...data, [key]: value });
+  };
+
+  const stepsComponents = [
+    <AccountForm data={data} handleData={handleData} />,
+    <ReviewForm data={data} handleData={handleData} />,
+    <Thanks data={data} />,
+  ];
   const { currentStep, currentComponent, next, back, isFirst, isLast } =
     useStep(stepsComponents);
 
