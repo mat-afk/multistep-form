@@ -44,7 +44,7 @@ function App() {
               </button>
             ) : (
               <button type="submit">
-                <span>Send</span>
+                <span>Submit</span>
                 <GrSend />
               </button>
             )}
