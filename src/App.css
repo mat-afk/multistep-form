@@ -26,7 +26,12 @@
 }
 
 .inputs-container {
-  min-height: 280px;
+  min-height: 310px;
+  padding: 1rem 0;
+}
+
+.account-container {
+  padding: 2rem 0;
 }
 
 .form-control label {
